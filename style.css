@@ -9,9 +9,10 @@
 body {
     display: grid;
     grid-template-columns: 280px 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(6, 1fr);
-    height: 100vh;
+    grid-template-rows: 150px repeat(5, 1fr);
+    height: auto;
     font-family: 'Catamaran', sans-serif;
+    background-color: #e2e8f0;
 }
 
 img {
@@ -28,7 +29,7 @@ nav {
     line-height: 2;
     color: white;
     background-color: #0284c7;
-    box-shadow: 6px 0 5px -6px #94a3b8;
+    box-shadow: 10px 10px 15px -3px rgba(0,0,0,0.1);
 }
 
 .title {
@@ -61,7 +62,8 @@ header {
     grid-row: 1 / 2;
     padding: 12px 70px;
     font-weight: bold;
-    box-shadow: 0 6px 4px -4px #94a3b8; 
+    background-color: white;
+    box-shadow: 10px 10px 15px -3px rgba(0,0,0,0.1);
 }
 
 header > div {
@@ -69,9 +71,9 @@ header > div {
     justify-content: space-between;
 }
 
-.top-header img {
+.top-header img, .card img {
     width: 50px;
-    height: 45px;
+    height: 50px;
 }
 
 form {
@@ -137,7 +139,77 @@ button {
     width: 350px;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 280px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column: 2 / 8;
+    grid-row: 2 / 7;
+    padding: 20px 30px;
+    height: 1200px;
+}
 
-i {
-    font-size: 1.2rem;
+.projects-section {
+    grid-column: 1 / 4;
+    grid-row: 1 / 4;
+    margin-right: 20px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+    height: 90%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 10px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+.action {
+    text-align: end;
+
+}
+
+.action i {
+    margin-left: 8px;
+}
+
+.announcements {
+    grid-row: 1 / 2;
+}
+
+.announcement {
+    font-size: 0.9rem;
+}
+
+.trending {
+    grid-row: 2 / 3;
+    margin-top: 20px;
+    height: 320px;
+}
+
+.trending .card {
+    height: 100%;
+}
+
+.trend-user {
+    display: flex;
+}
+
+.trend-user img {
+    margin-right: 10px;
+}
+
+.trend-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
